@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- js module-->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+<body>
+<div id="loading-screen">
+    <img src="imgs/icon.png" alt="">
+    <img src="imgs/load.gif" alt="Loading...">
+</div>
+
+<div id="content" style="display: none;">
+    <div class="aside aside1">
+        <div class="logo">
+            <img src="imgs/logo3.jpg" alt="">
+        </div>
+        <div class="features">
+            <h2>Features</h2>
+            <a href=""><ion-icon name="nuclear-outline"></ion-icon></a>
+            <a href=""><ion-icon name="radio-outline"></ion-icon></a>
+            <a href=""><ion-icon name="flash-outline"></ion-icon></a>
+        </div>
+        <div class="accessory">
+            <img src="imgs/Accessory.jpg" alt="">
+        </div>
+    </div>
+    <div class="aside aside2">
+        <div class="icon">
+        </div>
+        <div class="colors">
+            <h2>Colors</h2>
+            <div class="chair-img">
+                <img src="imgs/chair-orange.png" alt="">
+            </div>
+            <div class="chair-img">
+                <img src="imgs/chair-green.png" alt="">
+            </div>
+            <div class="chair-img">
+                <img src="imgs/chair-purple.png" alt="">
+            </div>
+            <div class="chair-img">
+                <img src="imgs/chair-yellow.png" alt="">
+            </div>
+        </div>
+        <a href="https://codeidea1.github.io/my-portfolio/" class="codeidea">
+            <img src="imgs/icon.png" alt="">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+        </a>
+    </div>
+    <div class="landing-page" style="background-image: url(imgs/background.png);">
+        <div class="container">
+            <div class="header">
+                <menu class="menu menu1">
+                    <li><a href="">Home <ion-icon name="add-outline"></ion-icon></a></li>
+                    <li><a href="">About <ion-icon name="add-outline"></ion-icon></a></li>
+                </menu>
+                <div class="title">
+                    gaming
+                </div>
+                <menu class="menu menu2">
+                    <li><a href=""><ion-icon name="globe-outline"></ion-icon> www.gamingchair.com</a></li>
+                </menu>
+            </div>
+            <div class="gaming-chair" id="model-container">
+                <div class="text">
+                    Most Comfortable
+                </div>
+                <model-viewer class="gaming-chair-gltf blue-chair main" id="orbit-demo-active" interpolation-decay="200" src="models/blue chair/scene.gltf" alt="A 3D model of an astronaut"></model-viewer>
+                <div class="decoration">
+                    <img class="access headphones grabbable" id="item" src="imgs/headphones2.png" alt="">
+                    <img class="access mouse grabbable" id="item" src="imgs/mouse.png" alt="">
+                    <img class="access playstion grabbable" id="item" src="imgs/playstion.png" alt="">
+                    <img class="access keyboard grabbable" id="item" src="imgs/apple.png" alt="">
+                </div>
+            </div> 
+        </div>
+    </div>  
+    <div class="about" style="background-image: url(imgs/sec2\ background.png);">
+        <div class="container">
+            <div class="informations-container">
+                <div class="details">
+                    relax neck muscles
+                    <span class="line"></span>
+                </div>
+                <div class="details">
+                    relieve wrist fatigue
+                    <span class="line"></span>
+                </div>
+                <div class="details">
+                    comfy moldet armrests
+                    <span class="line"></span>
+                </div>
+                <div class="details">
+                    hard back
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="boxs-container">
+                <div class="box">
+                    <div class="point"></div>
+                    <span>back support system </span>
+                    <ion-icon name="leaf-outline"></ion-icon>
+                </div>
+                <div class="box">
+                    <div class="point"></div>
+                    <span>multi-adjustable armrest</span>
+                    <ion-icon name="sync-circle-outline"></ion-icon>
+                </div>
+                <div class="box">
+                    <div class="point"></div>
+                    <span>
+                        Stable and sturdy wheel base
+                    </span>                        
+                    <ion-icon name="nuclear-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div> 
+  </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

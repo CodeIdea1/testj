@@ -1,0 +1,593 @@
+:root {
+    --main-color: rgb(0, 61, 56);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .7s;
+}
+body {
+    font-family:  'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+@keyframes headphones {
+    0% {
+        transform: rotate(0deg) translate(0);
+    }
+    100% {
+        transform: rotate(10deg) translateX(20px) ;
+    }
+}
+@keyframes mouse {
+    0% {
+        transform: rotate(-40deg) translate(0);
+    }
+    100% {
+        transform: rotate(-30deg) translate(10px, -20px) ;
+    }
+}
+@keyframes playstion {
+    0% {
+        transform: rotate(0deg) translate(0);
+    }
+    100% {
+        transform: rotate(7deg) translate(14px, -16px) ;
+    }
+}
+@keyframes keyboard {
+    0% {
+        transform: rotate(-5deg) translate(0);
+    }
+    100% {
+        transform: rotate(-8deg) translate(0px, 30px) ;
+    }
+}
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+#loading-screen img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+.aside {
+    width: 10%;
+    position: absolute;
+    z-index: 9;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 50px 0;
+    background-image: linear-gradient(to bottom, black, transparent);
+}
+.aside2 {
+    right: 0;
+    z-index: 9;
+}
+.aside::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.178), transparent);
+    width: 1px;
+    height: 100%;
+}
+
+.aside2::before {
+    left: 0;
+} 
+.logo img {
+    width: 40px;
+    margin-bottom: 100px;
+}
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.features h2 {
+    margin: 0 0 16px 0;
+    font-size: 15px;
+}
+.features ion-icon {
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 4px 0;
+}
+.accessory {
+    width: 53%;
+}
+.accessory img {
+    width: 100%;
+    border-radius: 30%;
+}
+.colors h2 {
+    margin: 25px 0 100px 0;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+.colors .chair-img {
+    display: block;
+    width: 58px;
+    border-radius: 20%;
+    background-image: linear-gradient(to right, black, rgba(255, 255, 255, 0.096));
+    margin-bottom: 20px;
+}
+.colors .chair-img img {
+    width: 100%;
+}
+.codeidea {
+    width: 90px;
+    padding: 7px 7px 7px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.384);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.codeidea img{
+    width: 18px;
+    
+}
+.codeidea ion-icon{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.74);
+}
+.header {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to left, black, rgba(255, 255, 255, 0.384),  black);
+}
+.header {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .title {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 40px;
+    padding: 0 0 11px 0;
+    position: relative;
+}
+.header .menu {
+    margin: auto;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header .menu li {
+    height: 100%;
+    display: flex;
+}
+.header .menu li a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header .menu li a:hover {
+    color:aqua;
+}
+.header .menu li a ion-icon {
+    padding: 0 0 0 5px;
+}
+.header .menu2 li a ion-icon {
+    padding: 0 5px 0 0;
+}
+.header .menu2::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: -30px;
+    width: 1px;
+    height: 1100px;
+    background-image: linear-gradient(to top, transparent, transparent, rgba(255, 255, 255, 0.178));
+}
+.header .menu1::before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: -30px;
+    width: 1px;
+    height: 1100px;
+    background-image: linear-gradient(to top, transparent, transparent, rgba(255, 255, 255, 0.178));
+}
+.header .menu li {
+    margin: 20px;
+    display: inline;
+    float: left;
+    list-style: none;
+}
+.header .menu li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.87);
+}
+.landing-page {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.landing-page .decoration {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 90%;
+    height: 100%;
+    font-size: 100px;
+    color: white;
+    opacity: .7;
+    z-index: 9999999999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.landing-page .decoration .access {
+    position: absolute;
+    cursor: pointer;
+}
+.landing-page .decoration .headphones {
+    left: 26%;
+    top: 0%;
+    width: 83px;
+    filter: blur(1.5px);
+    animation-name: headphones;
+    animation-duration: 4s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    -webkit-filter: blur(1.5px);
+}
+.landing-page .decoration .mouse {
+    width: 200px;
+    filter: blur(0px);
+    left: 68%;
+    top: 66%;
+    animation-name: mouse;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    transform: rotate(-40deg);
+    -webkit-filter: blur(0px);
+}
+.landing-page .decoration .playstion {
+    width: 100px;
+    filter: blur(0px);
+    right: 30%;
+    top: -10%;
+    animation-name: playstion;
+    animation-duration: 4s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    -webkit-filter: blur(0px);
+}
+.landing-page .decoration .keyboard {
+    width: 250px;
+    filter: blur(0px);
+    left: -6%;
+    bottom: 5%;
+    animation-name: keyboard;
+    animation-duration: 5s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    -webkit-filter: blur(0px);
+    transform: rotate(-5deg) ;
+}
+.landing-page .gaming-chair {
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.842);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.landing-page .gaming-chair .main {
+    width: 100%;
+    height: 85%;
+    filter: drop-shadow(7px 1px 7px rgba(0, 0, 0, 0.993));
+    transition: .7s;
+    z-index: 99999999999;
+    -webkit-filter: drop-shadow(7px 1px 7px rgba(0, 0, 0, 0.993));
+}
+.landing-page .gaming-chair .main.animation {
+    transform: translateY(540px);
+    width: 100%;
+    height: 90%;
+    z-index: 99999999999;
+}
+@media (max-width: 800px) {
+    .header .menu {
+        font-size: 13px;
+    }
+    .header .title {
+        font-size: 25px;
+    }
+    .aside .logo img{
+        width: 30px;
+    }
+    .features h2{
+        font-size: 13px;
+    }
+    .features ion-icon {
+        font-size: 15px;
+    }
+    .landing-page .gaming-chair {
+        height: 500px;
+    }
+}
+@media (max-width: 600px) {
+    .aside .logo img{
+        width: 25px;
+    }
+    .header .title {
+        font-size: 20px;
+    }
+    .header .menu li {
+        margin: 10px;
+    }
+    .header .menu1::before {
+        right: 0px;
+    }
+    .header .menu2::before {
+        left: 0px;
+    }
+    .landing-page .gaming-chair {
+        height: 400px;
+    } 
+    .features ion-icon {
+        font-size: 13px;
+    }
+    .features h2{
+        font-size: 12px;
+    }
+}
+@media (max-width: 500px) {
+    .header .menu {
+        display: none;
+    }
+    .header .title {
+        margin: 0 auto;
+    }
+    .aside {
+        width: 80px;
+    }
+}
+
+
+.about {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0 100px 0;
+    position: relative;
+}
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: 2s;
+}
+.about .container.animation {
+    opacity: 1;
+}
+.about .boxs-container {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+.about .boxs-container .box {
+    width: 100%;
+    height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.178);
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+}
+.about .boxs-container .box .point {
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-color: rgba(132, 230, 255, 0.377);
+    left: -10px;
+    scale: .1;
+}
+.about .boxs-container .box .point.animation {
+    scale: 1;
+}
+.about .boxs-container .box span {
+    line-height: 3ch;
+    z-index: 99;
+    width: 80%;
+}
+.about .boxs-container .box ion-icon {
+    color: white;
+    font-size: 40px;
+}
+.about .informations-container {
+    width: 200px;
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    margin-left: 150px;
+    padding-top: 100px;
+}
+.about .informations-container .details {
+    margin-bottom: 0px;
+    color: rgba(255, 255, 255, 0.623);
+    padding: 5px 8px;
+    background-image: linear-gradient(to right, rgba(69, 212, 255, 0.253), rgba(0, 0, 0, 0));
+    position: relative;
+    transition: .7s;
+    opacity: 0;
+}
+.about .informations-container .details.margin-bottom {
+    margin-bottom: 60px;
+    opacity: 1;
+}
+.about .informations-container .details::after {
+    content: '';
+    position: absolute;
+    right: -70px;
+    bottom: -26px;
+    width: 80px;
+    height: 20px;
+    border: 1px solid rgba(132, 230, 255, 0.527);
+    border-top: none;
+    border-right: none;
+}
+@media (max-width: 1000px) {
+    .about .informations-container {
+        margin-left: 50px;
+    }
+}
+@media (max-width: 800px) {
+    .about .informations-container {
+        margin-left: 10px;
+        width: 140px;
+        font-size: 14px;
+    }
+    .about .boxs-container {
+        width: 
+        90%;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+    }
+    .landing-page .decoration .headphones {
+        width: 75px;
+        left: 18%;
+    }
+    .landing-page .decoration .mouse {
+        width: 55px;
+        top: 63%;
+    }
+    .landing-page .decoration .keyboard {
+        width: 130px;
+        top: 53%;
+        left: 5%;
+    }
+    .landing-page .decoration .playstion {
+        width: 120px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .about .informations-container {
+        margin-left: 0px;
+        font-size: 12px;
+        padding-top: 50px;
+        justify-content: start;
+    }
+    .about .informations-container .details::after {
+        width: 70px;
+        right: -20px;
+    }
+    .landing-page .gaming-chair .main {
+        height: 70%;
+    }
+    .landing-page .gaming-chair .main.animation {
+        height: 70%;
+        transform: translateY(400px);
+        margin-left: 100px;
+    }
+    .about .informations-container .details.margin-bottom {
+        margin-bottom: 30px;
+        opacity: 1;
+    }
+    .codeidea {
+        width: 65px;
+        padding: 5px 5px 5px 10px;
+    }
+    .about .boxs-container {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: column;
+        width: 80%;
+        height: 343px;
+    }
+    .about .boxs-container .box {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+    .about .boxs-container .box ion-icon {
+        font-size: 30px;
+    }
+    .landing-page .decoration .headphones {
+        display: none;
+    }
+    .landing-page .decoration .mouse {
+        display: none;
+    }
+    .landing-page .decoration .keyboard {
+        width: 110px;
+        top:73%;
+        left: -5%;
+    }
+    .landing-page .decoration .playstion {
+        width: 46px;
+        right: 20%;
+        top: -5%;
+    }
+    .gaming-chair .text {
+        font-size: 20px;
+        top: 10%;
+    }
+    .about .boxs-container .box .point.animation {
+        scale: 1.1;
+    }
+}
